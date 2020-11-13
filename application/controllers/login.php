@@ -45,7 +45,35 @@ class login extends CI_Controller
             $this->load->view('template/footer');
             //redirect('login/index','refresh');
         }
+
     }
+    public function reg()
+	{
+		$data['title'] = 'registrasi';
+		$this->load->view('template/header_registrasi', $data);
+		$this->load->view('login/Register', $data);
+		$this->load->view('template/footer21', $data, );
+	}
+
+	public function reg_process()
+	{
+		$this->API = "http://localhost/GerobakCOM/user";
+		$data = array(
+            'id'            => $this->input->post('id'),
+			'namapelanggan' => $this->input->post('namapelanggan'),
+			'username'      => $this->input->post('username'),
+            'password'      => $this->input->post('password'),
+            'level'         => $this->input->post('level')
+		);
+
+		$update =  $this->curl->simple_post($this->API, $data, array(CURLOPT_BUFFERSIZE => 10));
+		if ($update) {
+			$this->session->set_flashdata('result', 'Registrasi Berhasil');
+		} else {
+			$this->session->set_flashdata('result', 'Registrasi Gagal');
+		}
+		redirect('login');
+	}
 
     public function logout()
     {

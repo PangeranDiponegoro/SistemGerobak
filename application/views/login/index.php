@@ -27,7 +27,7 @@
                                     <div class="invalid-feedback"> Enter your password too! </div>
                                 </div>
                                 <button type="submit" style="width:100%;" class="btn btn-success btn-lg" id="btnLogin"> Login </button>
-
+                                <a href="<?php echo site_url() ?>login/reg" class="btn btn-dark btn-block" id="btnRegister"role="button">Registrasi</a>
                             </form>
 
                             <br>

@@ -18,10 +18,10 @@
             $this->load->model('user_model');
 
             $data['title']='User';
-            $data['buku']=$this->user_model->getAllbuku();
+            $data['barang']=$this->user_model->getAllbarang();
 
             if($this->input->post('keyword')){
-                $data['buku'] = $this->user_model->cariDatabuku();
+                $data['barang'] = $this->user_model->cariDatabarang();
             }
 
             $this->load->view('template/header2',$data);
@@ -31,21 +31,21 @@
 
 
         public function detail($id){
-            $data['title'] = 'Detail buku';
-            $data['buku'] = $this->user_model->getbukuByID($id);
+            $data['title'] = 'Detail barang';
+            $data['barang'] = $this->user_model->getbarangByID($id);
 
             $this->load->view('template/header2', $data);
             $this->load->view('user/detail', $data);
             $this->load->view('template/footer');
         }
         public function hapus($id){
-            $this->user_model->hapusdatabuku($id);
+            $this->user_model->hapusdatabarang($id);
 
-            $this->session->set_flashdata('flash-data', 'Dipinjam');
+            $this->session->set_flashdata('flash-data', 'Dibeli');
             redirect('user','refresh');
         }
         public function kembali($id){
-            $this->user_model->kembalidatabuku($id);
+            $this->user_model->kembalidatabarang($id);
 
             $this->session->set_flashdata('flash-data', 'Kembali');
             redirect('user','refresh');
