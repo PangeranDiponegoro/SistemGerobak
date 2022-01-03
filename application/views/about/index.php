@@ -1,15 +1,40 @@
 <div class="container">
             <div class="row mt-4">
                 <div class="col-md-12">
-                    <center><H1>About</H1></center>
-                    <center><p>Pada zaman global sekarang, pendidikan merupakan sesuatu yang penting. 
-                    Karena pendidikan merupakan akar dari peradaban sebuah bangsa. 
-                    Pendidikan sekarang telah menjadi kebutuhan pokok yang harus dimiliki setiap orang agar bisa menjawab tantangan kehidupan.
-                    Untuk memperoleh pendidikan, banyak cara yang dapat kita capai. Diantaranya melalui perpustakaan. 
-                    Karena di perpustakaan berbagai sumber informasi bisa kita peroleh, 
-                    selain itu banyak juga manfaat lain yang dapat kita peroleh melalui perpustakaan. 
-                    Perpustakaan diartikan sebuah ruangan atau gedung yang digunakan untuk menyimpan buku dan 
-                    terbitan lainnya yang biasanya disimpan menurut tata susunan tertentu yang digunakan pembaca bukan untuk dijual.</p></center>
+                    <td>
+                        <br>
+                        <h3>About</h3>                        
+                        <hr>
+                            <br>
+                            <p>Dalam era Globalisasi saat ini teknologi informasi sangat membantu meringankan pekerjaan pada semua bidang kehidupan manusia. Salah satu diantaranya adalah bidang ekonomi, karena kebutuhan dunia ekonomi demikian tinggi untuk pembangunan perekonomian. Dalam era sekarang perusahaan memiliki dua jenis pengelolaan usaha yang bergerak di bidang barang dan jasa. Perusahaan yang bergerak di bidang jasa sangatlah populer di era modern ini karena banyak sekali badan usaha yang menggunakan jasa mereka sehingga banyak pelaku usaha yang semakin dipermudah untuk mengelola barang/jasa yang dijalankan.</p>
+                            <p>Salah satu jenis jasa yang populer di masa sekarang adalah persewaan barang, perusahaan saat ini ingin mempermudah pengguna jasa mereka dengan cara membuat sistem online. Sistem online yang dibuat bertujuan untuk mempermudah badan usaha yang ingin menggunakan jasa mereka, salah satu jenis usaha yang ditawarkan adalah usaha pembelian gerobak .Untuk mempermudah orang-orang yang membutuhkan gerobak dibidang kuliner maupun bidang yang lain.</p>
+                            <br>                               
+                        <hr> 
+                        <h3>Lokasi</h3>                        
+                        <hr>
+                        <br>
+                            Jl. Saxophone Lowokwaru, Malang
+                        <br>
+                        <br>
+                        <div id="googleMap" style="width:100%;height:380px;"></div>
+                        <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize(){
+var propertiPeta = {
+center:new google.maps.LatLng(-7.925245,112.605684), zoom:9, mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var peta = new google.maps.Map(document.getElementById("googleMap"),propertiPeta);
+
+var marker=new google.maps.Marker({
+position: new google.maps.LatLng(-7.925245,112.605684), map: peta
+});
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+                        <br>
+                        <br>    
+                    </td>
                 </div>
             </div>
 </div>
